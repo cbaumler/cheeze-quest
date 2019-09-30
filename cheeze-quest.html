@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="cheeze-quest.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148351801-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-148351801-1');
+	</script>
+
+	<link href="cryptodonate/css/cryptodonate.css" rel="stylesheet"/>
+	<link href="cryptodonate/css/cryptodonate.dark.css" rel="stylesheet"/>
+	<link href="cheeze-quest.css" rel="stylesheet"/>
+	<title>
+            Cheeze Quest
+    </title>
 </head>
 <body>
+	<script>
+	    !function(c){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.onload=c,t.src="cryptodonate/cryptodonate.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}(function(){
+
+	            var coins = {
+	                'bitcoin': '3DfQUj5RkmeEDAaMpYWPqCtrvAfMbHgj8z',
+	                'ethereum': '0x60E9e7802421f74aB2e86262B846175b6595d173',
+	                'litecoin': 'MWnAjMi2K8Aj5pDxmXU6hANxNFifQLRoN7',
+	                'monero': '4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbS5T3e3gwfg5EZUQRAu',
+	                'iota': 'D9O9XH9ITTCOUZVSAQRXWKGVYRIQQUORSNHLSWJIXCHWCMVAUIOTYYSNCFKDYDDQHPDNM9ZKDHF9JJMFWIOIYJ9PUY'
+	            };
+	            var coinNames = Object.keys(coins);
+
+	            for (var i = 0;i < coinNames.length;i++) {
+	                var coin = coinNames[i];
+	                var address = coins[coin];
+	                var elems = document.getElementsByClassName(coin);
+
+	                for(var j = 0;j < elems.length;j++) {
+	                    var cd = new Fr.CryptoDonate({
+	                        coin: coin,
+	                        address: address,
+	                        baseURL: 'cryptodonate',
+	                        buttonLarge: elems[j].className.match('large') !== null,
+
+	                        buttonClass: elems[j].getAttribute('data-theme'),
+	                        dialogClass: elems[j].getAttribute('data-theme')
+	                    });
+	                    cd.appendTo(elems[j]);
+	                }
+	            }
+	      });
+    </script>
 	<div class="header-div">
-		<img src="logo.png" alt="Logo" class="logo">
-		<img src="slice.png" alt="Cheese Slice" class="slice">
+		<a href="http://www.cheezewizards.com"><img src="images/logo.png" alt="Cheeze Wizards Logo" class="cheeze-wizards-logo"></a>
+		<img src="images/slice.png" alt="Cheese Slice" class="slice">
 	</div>
 	<div class="center-div">
 		<iframe src="https://play2.textadventures.co.uk/Play.aspx?id=ko-rjxeoluosyzhzz-ohoq">
@@ -14,7 +61,35 @@
 		</iframe>
 	</div>
 	<div class="footer-div">
-		<img src="drip.png" class="drip">
+		<img src="images/drip.png" class="drip">
+		<div class="donate-table">
+        <table class="center">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="bitcoin" data-theme="light">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="ethereum" data-theme="light">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="litecoin" data-theme="light">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="monero" data-theme="light">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="iota" data-theme="light">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 	</div>
 </body>
 </html>

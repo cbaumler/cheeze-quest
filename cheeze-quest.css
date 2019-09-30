@@ -1,5 +1,5 @@
 iframe {
-    width: 100%;
+    width: 670px;
     height: 500px;
     margin: 0 auto;
     background-color: transparent;
@@ -8,25 +8,32 @@ iframe {
 }
 
 body {
-	background-color: #fff032;
 	margin: 0 auto;
+	background-color:black;
 }
 
 .header-div {
-	background-image: url(white-grid.png);
+	background-image: url(images/white-grid.png);
 	background-size: 30px;
-	background-position: right top;
+	background-position: left;
 	background-repeat: repeat;
 }
 
 .center-div {
-	background-image: url(wiz-full.svg), url(yellow-grid.png);
-	background-size: 450px, 30px;
-	background-position: 0, right top;
-	background-repeat: no-repeat, repeat;
+	width: auto;
+	background-color: #fff032;
+	background-image: url(images/wiz-full.svg), url(images/evil-wiz-full-1.png), url(images/yellow-grid.png);
+	background-size: 450px, 450px, 30px;
+	background-position: left, right, left;
+	background-repeat: no-repeat, no-repeat, repeat;
 }
 
-.logo {
+.footer-div {
+	background-color:black;
+	bottom: 0px;
+}
+
+.cheeze-wizards-logo {
 	width: 300px;
 	position: absolute;
 	left: 0;
@@ -34,7 +41,7 @@ body {
 }
 
 .slice {
-	width: 650px;
+	width: 668px;
 	margin: 0 auto;
 	padding-top: 15px;
 	display:block;
@@ -43,11 +50,22 @@ body {
 }
 
 .drip {
-	width: auto;
+	width: 100%;
 	height: 100px;
 	margin: 0 auto;
 	display:block;
-	background-color:black;
-	position: fixed;
-	bottom: 0px;
+	float: left;
 }
+
+.donate-table {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display:block;
+	float: middle;
+	bckground-color:black;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
