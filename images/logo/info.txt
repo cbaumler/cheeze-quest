@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: playtime
+font link: https://www.fontsquirrel.com/fonts/playtime-with-hot-toddies
+font author: Graham Meade
+font author site: http://www.moorstation.org/typoasis/designers/gemnew/w01.htm
+
+
+icon designer: Lil Squid
+icon designer link: /Lil Squid
+        
+{"bg":"#FBF3EF","icon-gradient-0":"#A92580","icon-gradient-1":"#F7BC00","font":"#2F190E","slogan":"#432d22"}
+      
